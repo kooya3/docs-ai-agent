@@ -89,7 +89,7 @@ export default function Hero() {
               size="lg"
               variant="outline"
               className="text-white border-purple-500 hover:bg-purple-500/20"
-              onClick={() => window.location.href = "/pricing"}
+              onClick={() => window.location.href = "/"}
             >
               <Sparkles className="mr-2 h-5 w-5" />
               See Examples
