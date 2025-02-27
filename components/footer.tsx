@@ -33,17 +33,17 @@ const footerLinks = {
 const socialLinks = [
   {
     name: "Twitter",
-    href: "https://twitter.com",
+    href: "https://twitter.com/kooya3",
     icon: Twitter,
   },
   {
     name: "GitHub",
-    href: "https://github.com",
+    href: "https://github.com/kooya3",
     icon: Github,
   },
   {
     name: "Email",
-    href: "mailto:hello@example.com",
+    href: "mailto:elyees.dev@gmail.com",
     icon: Mail,
   },
 ]

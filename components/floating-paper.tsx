@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
-import { Fingerprint } from "lucide-react"
+import { CloudUpload } from "lucide-react"
 
 export function FloatingPaper({ count = 5 }) {
   const [dimensions, setDimensions] = useState({ width: 1200, height: 800 })
@@ -51,7 +51,7 @@ export function FloatingPaper({ count = 5 }) {
           }}
         >
           <div className="relative w-16 h-20 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10 flex items-center justify-center transform hover:scale-110 transition-transform">
-            <Fingerprint className="w-8 h-8 text-green-400/50" />
+            <CloudUpload className="w-8 h-8 text-pink-400/50" />
           </div>
         </motion.div>
       ))}
