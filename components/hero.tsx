@@ -1,6 +1,7 @@
 "use client"
 
 import type React from "react"
+import Form from "next/form";
 import { motion } from "framer-motion"
 import { FileText, Sparkles, Link as LinkIcon } from "lucide-react"
 import { FloatingPaper } from "@/components/floating-paper"
@@ -8,7 +9,7 @@ import { RoboAnimation } from "@/components/robo-animation"
 import { useRef, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { useFormState, useFormStatus } from "react-dom"
-import { analyzeContent } from "@/lib/actions" // Assume you have this action
+import { analyzeContent } from "@/actions/analyseYoutubeVideo";
 
 // Add initial state type
 interface FormState {
@@ -49,7 +50,11 @@ export default function Hero() {
   const [uploadedFiles, setUploadedFiles] = useState<File[]>([])
   const [url, setUrl] = useState("")
   const fileInputRef = useRef<HTMLInputElement>(null)
-  const [state, formAction] = useFormState<FormState>(analyzeContent, {})
+  const [state, setState] = useState<FormState>({})
+  const formAction = async (formData: FormData) => {
+    const newState = await analyzeContent(state, formData)
+    setState(newState)
+  }
 
   const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(event.target.files || [])
@@ -88,7 +93,7 @@ export default function Hero() {
             Upload research papers or enter a Youtube URL, and let our AI transform them into engaging presentations, podcasts, and visual content.
           </motion.p>
 
-          <form action={formAction}>
+          <Form action={formAction}>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -119,7 +124,7 @@ export default function Hero() {
                 <LinkIcon className="absolute right-4 top-3.5 h-5 w-5 text-gray-400" />
               </div>
 
-              {state?.errors?.url && (
+              {state.errors?.url && (
                 <p className="text-red-400 text-sm -mt-2">{state.errors.url.join(", ")}</p>
               )}
 
@@ -137,7 +142,7 @@ export default function Hero() {
                 <AnalyseButton />
               </div>
 
-              {state?.errors?.files && (
+              {state.errors?.files && (
                 <p className="text-red-400 text-sm">{state.errors.files.join(", ")}</p>
               )}
             </motion.div>
@@ -160,7 +165,7 @@ export default function Hero() {
                 </ul>
               </motion.div>
             )}
-          </form>
+          </Form>
         </div>
       </div>
 
@@ -170,4 +175,4 @@ export default function Hero() {
       </div>
     </div>
   )
-};
+}
