@@ -137,7 +137,7 @@ export default function Features() {
             transition={{ duration: 0.5, delay: 0.7 }}
             className="mt-16 text-center"
           >
-            <Button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-6 text-lg">
+            <Button className="rounded-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-6 text-lg ">
               Try It Now
               <Sparkles className="ml-2 h-5 w-5" />
             </Button>

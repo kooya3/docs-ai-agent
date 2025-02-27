@@ -40,7 +40,7 @@ export default function Hero() {
     <div className="relative min-h-[calc(100vh-76px)] flex items-center">
       {/* Floating papers background */}
       <div className="absolute inset-0 overflow-hidden">
-        <FloatingPaper count={6} />
+        <FloatingPaper count={4} />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -81,14 +81,14 @@ export default function Hero() {
               multiple
             />
 
-            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8" onClick={handleUploadClick}>
+            <Button size="lg" className="rounded-xl bg-blue-600 hover:bg-blue-700 text-white px-8" onClick={handleUploadClick}>
               <FileText className="mr-2 h-5 w-5" />
               Upload Paper
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="text-white border-blue-500 hover:bg-gray-500/20"
+              className="rounded-xl text-white border-blue-500 hover:bg-gray-500/20"
               onClick={() => window.location.href = "/"}
             >
               <Sparkles className="mr-2 h-5 w-5" />

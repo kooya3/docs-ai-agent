@@ -31,7 +31,7 @@ export default function Navbar() {
               <Link href="/manage-plan">
                 <Button 
                   variant="outline" 
-                  className="rounded-l-xl bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white border-0"
+                  className="rounded-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white border-0"
                 >
                   Manage Plan
                 </Button>
@@ -47,7 +47,7 @@ export default function Navbar() {
 
             {!user && (
               <SignInButton mode="modal">
-                <Button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white">
+                <Button className="rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white">
                   Sign In
                 </Button>
               </SignInButton>
