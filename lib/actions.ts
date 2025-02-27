@@ -1,7 +1,15 @@
 // app/lib/actions.ts
 "use server"
 
-import { FormState } from "@/components/hero"
+export type FormState = {
+  errors?: {
+    url?: string[];
+    files?: string[];
+  };
+  success?: boolean;
+  message?: string;
+};
+
 
 export async function analyzeContent(prevState: FormState, formData: FormData): Promise<FormState> {
   const files = formData.getAll("files") as File[]

@@ -8,7 +8,7 @@ import { FloatingPaper } from "@/components/floating-paper"
 import { RoboAnimation } from "@/components/robo-animation"
 import { useRef, useState } from "react"
 import { Button } from "@/components/ui/button"
-import { useFormState, useFormStatus } from "react-dom"
+import { useFormStatus } from "react-dom"
 import { analyzeContent } from "@/actions/analyseYoutubeVideo";
 
 // Add initial state type

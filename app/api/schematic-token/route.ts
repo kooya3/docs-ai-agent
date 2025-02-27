@@ -1,12 +1,11 @@
 // app/api/schematic-token/route.ts
 import { SchematicClient } from "@schematichq/schematic-typescript-node"
 import { getAuth } from "@clerk/nextjs/server"
-import { NextResponse } from "next/server"
+import { NextResponse, NextRequest } from "next/server"
 
-export async function GET(request: Request) {
+export async function GET(request: NextRequest) {
   try {
-    const authHeaders = request.headers;
-    const { userId } = getAuth({ headers: authHeaders });
+    const { userId } = getAuth(request);
 
     if (!userId) {
       return NextResponse.json(

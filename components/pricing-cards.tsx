@@ -67,7 +67,7 @@ export default function PricingCards() {
     }
 
     setupSchematic()
-  }, [user, identify])
+  }, [user, identify, organization])
 
   if (!componentId) {
     return (

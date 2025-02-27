@@ -36,7 +36,7 @@ export function SubscriptionCard({ subscription }: SubscriptionCardProps) {
             <h3 className="text-xl font-semibold text-white mb-1">{product.name}</h3>
             <p className="text-sm text-gray-400">{product.description}</p>
           </div>
-          <Badge variant={subscription.status === "active" ? "success" : "destructive"} className="capitalize">
+          <Badge variant={subscription.status === "active" ? "secondary" : "destructive"} className="capitalize">
             {subscription.status === "active" ? (
               <CheckCircle2 className="mr-1 h-3 w-3" />
             ) : (

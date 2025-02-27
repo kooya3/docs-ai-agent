@@ -58,7 +58,7 @@ export default function PricingPage() {
         <div className="mt-20 text-center">
           <h3 className="text-xl text-gray-300 mb-4">Need a custom solution?</h3>
           <p className="text-gray-400 max-w-2xl mx-auto mb-8">
-            Contact our team for enterprise pricing and custom integrations tailored to your organization's needs.
+            Contact our team for enterprise pricing and custom integrations tailored to your organization&apos;s needs.
           </p>
           <button className="inline-flex items-center px-6 py-3 border border-purple-500 text-purple-400 rounded-lg hover:bg-purple-500/10 transition-colors">
             Contact Sales

@@ -8,8 +8,8 @@ import { CheckCircle } from "lucide-react"
 
 function SuccessPageContent() {
   const searchParams = useSearchParams()
-  const sessionId = searchParams.get("session_id")
-  const orderNumber = searchParams.get("orderNumber")
+  /* const sessionId = searchParams.get("session_id") */
+  const orderNumber = searchParams?.get("orderNumber")
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-black/[0.96] antialiased bg-grid-white/[0.02]">

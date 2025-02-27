@@ -40,7 +40,7 @@ export function OrderCard({ order }: OrderCardProps) {
             <p className="text-sm text-gray-400 mb-1">Order Number</p>
             <p className="font-mono text-white">{order.orderNumber}</p>
           </div>
-          <Badge variant={order.status === "paid" ? "success" : "destructive"} className="capitalize">
+          <Badge variant={order.status === "paid" ? "default" : "destructive"} className="capitalize">
             {order.status === "paid" ? <CheckCircle2 className="mr-1 h-3 w-3" /> : <XCircle className="mr-1 h-3 w-3" />}
             {order.status}
           </Badge>
