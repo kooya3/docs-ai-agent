@@ -1,6 +1,8 @@
 import Hero from "@/components/hero"
 import Navbar from "@/components/navbar"
+import Features from "@/components/features"
 import { SparklesCore } from "@/components/sparkles"
+
 
 export default function Home() {
   return (
@@ -21,6 +23,7 @@ export default function Home() {
       <div className="relative z-10">
         <Navbar />
         <Hero />
+        <Features />
       </div>
     </main>
   )
